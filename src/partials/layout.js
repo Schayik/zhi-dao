@@ -17,9 +17,9 @@ import Footer from "./footer"
 
 import GlobalStyle from '../styles/global'
 import THEME from '../styles/theme'
-import "../styles/gatsby.css"
+// import "../styles/gatsby.css"
 
-const Layout = ({ children, title }) => {
+const Layout = ({ children, title, CustomSideBar, location }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -33,13 +33,12 @@ const Layout = ({ children, title }) => {
   return (
     <>
       <ThemeProvider theme={THEME}>
-        <GlobalStyle>
-          <Head title={title} />
-          <NavBar siteTitle={data.site.siteMetadata.title} />
-          <Header title={title} />
-          <main>{children}</main>
-          <Footer />
-        </GlobalStyle>
+        <GlobalStyle />
+        <Head title={title} />
+        <NavBar siteTitle={data.site.siteMetadata.title} pathname={location && location.pathname} />
+        <Header title={title} CustomSideBar={CustomSideBar} />
+        <main>{children}</main>
+        <Footer />
       </ThemeProvider>
     </>
   )

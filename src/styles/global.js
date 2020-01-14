@@ -1,20 +1,27 @@
-import styled from 'styled-components'
-// import { createGlobalStyle } from 'styled-components'
+// import styled from 'styled-components'
+import { createGlobalStyle } from 'styled-components'
 
 import GatsbyStyle from './gatsby.js'
 
-const GlobalStyle = styled.div`
+const GlobalStyle = createGlobalStyle`
 
   /* ${GatsbyStyle} */
 
   @import url('https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i,900,900i&display=swap');
 
-  body {
-    font-family: 'Merriweather', serif;
+  * {
+    box-sizing: border-box;
   }
 
-  h1, h2, h3, h4, h5, h6, p {
+  body {
     font-family: 'Merriweather', serif;
+
+    margin: 0;
+  }
+
+  h1, h2, h3, h4, h5, h6, p, button {
+    font-family: 'Merriweather', serif;
+    font-weight: 400;
     margin: 0;
   }
 
@@ -33,10 +40,16 @@ const GlobalStyle = styled.div`
     text-decoration: none;
   }
 
+  button {
+    background-color: transparent;
+    border: none;
+  }
+
   .compress {
     max-width: 1439px;
     margin: 0 auto;
     padding: 0 40px;
+    height: 100%;
   }
 
 `

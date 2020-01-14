@@ -6,21 +6,24 @@ import styled from 'styled-components'
 import links from "../data/links"
 import Logo from '../icons/zhi-dao'
 
-const NavBar = ({ siteTitle }) => (
+const NavBar = ({ pathname }) => (
   <StyledNavBar>
+    {console.log(pathname)}
     <div className='compress'>
       <ul>
         {links.map(link => (
           <li key={link.link}>
-            <Link to={link.link}>{link.label}</Link>
+            <Link to={link.link} className={pathname === link.link ? 'active' : ''}>
+              {link.label}
+            </Link>
           </li>
         ))}
       </ul>
       <div className='sidebar'>
-          <div className='flag'>
-            <Logo />
-            <h1>Zhi Dao</h1>
-          </div>
+        <Link className='flag' to='/'>
+          <Logo />
+          <h1>Zhi Dao</h1>
+        </Link>
       </div>
     </div>
   </StyledNavBar>
@@ -43,6 +46,10 @@ const StyledNavBar = styled.nav`
 
     li {
       font-size: 1.125rem;
+
+      a.active {
+        color: ${p => p.theme.colors.cherry};
+      }
     }
   }
 
@@ -51,11 +58,11 @@ const StyledNavBar = styled.nav`
     width: ${p => p.theme.sidebar.width}px;
     position: relative;
 
-    .flag {
+    a.flag {
       background-color: ${p => p.theme.colors.red};
       position: absolute;
-      left: 40px;
-      right: 40px;
+      left: 32px;
+      right: 32px;
       height: calc(${p => p.theme.navbar.height}px + 40px);
       z-index: 1;
 
@@ -73,6 +80,7 @@ const StyledNavBar = styled.nav`
         color: ${p => p.theme.colors.white};
         font-size: 40px;
         font-style: italic;
+        line-height: .8;
       }
     }
   }

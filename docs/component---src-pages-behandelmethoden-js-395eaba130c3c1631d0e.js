@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[3],{"J+cS":function(e,n,t){"use strict";t.r(n);t("91GP");var a=t("q1tI"),c=t.n(a),o=t("oIa3");n.default=function(e){return c.a.createElement(o.a,Object.assign({},e,{title:"Behandelmethoden"}))}}}]);
+//# sourceMappingURL=component---src-pages-behandelmethoden-js-395eaba130c3c1631d0e.js.map
