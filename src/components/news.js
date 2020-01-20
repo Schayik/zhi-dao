@@ -1,17 +1,17 @@
 import React from 'react'
 import styled from 'styled-components'
-import { graphql, useStaticQuery } from 'gatsby'
+import { graphql, useStaticQuery, Link } from 'gatsby'
 import Img from 'gatsby-image'
 
-const News = ({ items }) => (
+const News = ({ edges }) => (
   <StyledNews>
-    {items.map(article => (
-      <Article key={article.date} article={article} />
+    {edges.map(edge => (
+      <Article key={edge.node.id} node={edge.node} />
     ))}
   </StyledNews>
 )
 
-const Article = ({ article }) => {
+const Article = ({ node }) => {
   const data = useStaticQuery(graphql`
     query {
       file(relativePath: {eq: "header-image.jpg" }) {
@@ -28,18 +28,18 @@ const Article = ({ article }) => {
   `)
 
   return (
-    <div key={article.date} className='item'>
+    <Link className='item' to={node.frontmatter.path}>
       <Img 
         fluid={data.file.childImageSharp.fluid}
         className='image'
       />
       <div className='date'>
-        <p>{article.date}</p>
+        <p><strong>{node.frontmatter.day}</strong> {node.frontmatter.month}</p>
       </div>
       <div className='title'>
-        <h3>{article.title}</h3>
+        <h3>{node.frontmatter.title}</h3>
       </div>
-    </div>
+    </Link>
   )
 }
 
@@ -51,7 +51,7 @@ const StyledNews = styled.div`
   grid-template-columns: 1fr 1fr;
   grid-gap: 64px;
 
-  .item {
+  a.item {
     height: 300px;
     position: relative;
     background-color: yellow;

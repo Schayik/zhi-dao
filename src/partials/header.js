@@ -68,6 +68,7 @@ const StyledHeader = styled.header`
 
         font-size: 1.5625rem;
         font-weight: 700;
+        text-align: center;
       }
     }
   }

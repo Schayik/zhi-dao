@@ -17,6 +17,9 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Merriweather', serif;
 
     margin: 0;
+
+    width: 100vw;
+    overflow-x: hidden;
   }
 
   h1, h2, h3, h4, h5, h6, p, button {

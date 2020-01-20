@@ -1,16 +1,19 @@
 const newsItems = [
   {
-    date: '18 Jan',
+    day: 18,
+    month: 'Jan',
     title: 'Syndroombeschrijvingen in de Chinese geneeskunde',
     relativeImagePath: 'header-image.jpg',
   },
   {
-    date: '26 Dec',
+    day: 26,
+    month: 'Dec',
     title: 'Syndroombeschrijvingen in de Chinese geneeskunde',
     relativeImagePath: 'header-image.jpg',
   },
   {
-    date: '8 Okt',
+    day: 8,
+    month: 'Okt',
     title: 'Syndroombeschrijvingen in de Chinese geneeskunde',
     relativeImagePath: 'header-image.jpg',
   },

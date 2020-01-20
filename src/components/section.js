@@ -6,7 +6,7 @@ import Heading from './heading'
 const Section = ({ heading, children }) => (
   <StyledSection>
     <div className='compress'>
-      <Heading heading={heading} />
+      {heading && <Heading heading={heading} />}
       {children}
     </div>
   </StyledSection>
