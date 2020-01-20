@@ -15,7 +15,7 @@ const StyledHeading = styled.div`
   display: flex;
   align-items: center;
 
-  margin-bottom: 80px;
+  margin-bottom: 60px;
 
   .line {
     flex: 1;

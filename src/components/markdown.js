@@ -1,19 +1,24 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Link } from 'gatsby'
 
-const Markdown = ({ markdownRemark, buttons }) => (
+import Button from './button'
+
+const Markdown = ({ html, buttons }) => (
   <StyledMarkdown>
     <div 
       className='markdown' 
-      dangerouslySetInnerHTML={{ __html: markdownRemark.html }}
+      dangerouslySetInnerHTML={{ __html: html }}
     />
     <div className='buttons'>
       {buttons && 
-        <ul className='buttons'>
+        <ul>
           {buttons.map(button => (
             <li key={button.link}>
-              <Link to={button.link}>{button.label}</Link>
+              <Button 
+                to={button.link}
+                link={button.link}
+                label={button.label}
+              />
             </li>
           ))}
         </ul>
@@ -27,15 +32,10 @@ export default Markdown
 
 const StyledMarkdown = styled.div`
   display: flex;
-  align-items: center;
 
   .markdown {
     font-size: 1rem;
     line-height: 30px;
-
-    /* p, ul {
-      margin-bottom: 1rem;
-    } */
 
     ul {
       list-style: disc;
@@ -46,6 +46,12 @@ const StyledMarkdown = styled.div`
   .buttons {
     flex-shrink: 0;
     width: ${p => p.theme.sidebar.width}px;
+
+    padding: 0 32px;
+
+    li:not(:first-child) {
+      margin-top: 20px;
+    }
 
   }
 

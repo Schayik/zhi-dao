@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Link } from 'gatsby'
+
+import Button from './button'
 
 const Grid = ({ items }) => (
   <StyledGrid>
@@ -8,9 +9,11 @@ const Grid = ({ items }) => (
       <div key={item.buttonLink} className='item'>
         <item.icon />
         <p>{item.bodyText}</p>
-        <Link to={item.buttonLink}>
-          {item.buttonText}
-        </Link>
+        <Button 
+          to={item.buttonLink}
+          link={item.buttonLink}
+          label={item.buttonText}
+        />
       </div>
     ))}
   </StyledGrid>

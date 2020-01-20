@@ -7,10 +7,14 @@ const GlobalStyle = createGlobalStyle`
 
   /* ${GatsbyStyle} */
 
-  @import url('https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i,900,900i&display=swap');
+  /* @import url('https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i,900,900i&display=swap'); */
 
   * {
     box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
   }
 
   body {
@@ -49,7 +53,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   .compress {
-    max-width: 1439px;
+    max-width: 1240px;
     margin: 0 auto;
     padding: 0 40px;
     height: 100%;

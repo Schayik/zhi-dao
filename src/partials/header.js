@@ -58,7 +58,7 @@ const StyledHeader = styled.header`
       width: ${p => p.theme.sidebar.width}px;
       background-color: ${p => p.theme.colors.whiteOverlay};
 
-      padding: 40px 32px 0 40px;
+      padding: 40px 32px 0 32px;
 
       display: flex;
       justify-content: center;

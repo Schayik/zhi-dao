@@ -1,47 +1,30 @@
 import React from 'react'
 import styled from 'styled-components'
-import { graphql, useStaticQuery, Link } from 'gatsby'
+import { Link } from 'gatsby'
 import Img from 'gatsby-image'
 
 const News = ({ edges }) => (
   <StyledNews>
-    {edges.map(edge => (
-      <Article key={edge.node.id} node={edge.node} />
+    {edges.map(({ node: { frontmatter } }) => (
+      <Link 
+        key={frontmatter.path}
+        className='item' 
+        to={frontmatter.path}
+      >
+        <Img 
+          fluid={frontmatter.featuredImage.childImageSharp.fluid}
+          className='image'
+        />
+        <div className='date'>
+          <p><strong>{frontmatter.day}</strong> {frontmatter.month}</p>
+        </div>
+        <div className='title'>
+          <h3>{frontmatter.title}</h3>
+        </div>
+      </Link>
     ))}
   </StyledNews>
 )
-
-const Article = ({ node }) => {
-  const data = useStaticQuery(graphql`
-    query {
-      file(relativePath: {eq: "header-image.jpg" }) {
-        id
-        childImageSharp {
-          fluid (
-            maxWidth: 1440
-          ) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
-
-  return (
-    <Link className='item' to={node.frontmatter.path}>
-      <Img 
-        fluid={data.file.childImageSharp.fluid}
-        className='image'
-      />
-      <div className='date'>
-        <p><strong>{node.frontmatter.day}</strong> {node.frontmatter.month}</p>
-      </div>
-      <div className='title'>
-        <h3>{node.frontmatter.title}</h3>
-      </div>
-    </Link>
-  )
-}
 
 export default News
 

@@ -3,8 +3,8 @@ import styled from 'styled-components'
 
 import Heading from './heading'
 
-const Section = ({ heading, children }) => (
-  <StyledSection>
+const Section = ({ id, heading, children }) => (
+  <StyledSection id={id}>
     <div className='compress'>
       {heading && <Heading heading={heading} />}
       {children}
@@ -15,5 +15,5 @@ const Section = ({ heading, children }) => (
 export default Section
 
 const StyledSection = styled.section`
-  margin-top: 100px;
+  padding-top: 100px;
 `
