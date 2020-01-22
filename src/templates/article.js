@@ -30,7 +30,7 @@ const Article = ({ data, ...props }) => (
     title={data.markdownRemark.frontmatter.title}
   >
     <Section>
-      <Markdown markdownRemark={data.markdownRemark} />
+      <Markdown html={data.markdownRemark.html} />
     </Section>
   </Layout>
 )

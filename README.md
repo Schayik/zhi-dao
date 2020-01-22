@@ -1,3 +1,18 @@
+# GitHub Pages
+
+### GitHub
+* Configure settings: <repository_name> -> Settings => GitHub Pages: change 'Source' to: master branch /docs folder
+
+### Push
+1. add `pathPrefix` (/<repository_name>) in gatsby-config.js
+2. clean gatsby: `gatsby clean`
+3. build with prefix: `gatsby build --prefix-paths`
+4. rename public folder to docs
+5. push
+6. remove `pathPrefix` (or comment out)
+
+# Gatsby
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.org">

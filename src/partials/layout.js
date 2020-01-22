@@ -38,7 +38,7 @@ const Layout = ({ children, title, CustomSideBar, location }) => {
         <NavBar siteTitle={data.site.siteMetadata.title} pathname={location && location.pathname} />
         <Header title={title} CustomSideBar={CustomSideBar} />
         <main>{children}</main>
-        <Footer />
+        <Footer pathname={location && location.pathname} />
       </ThemeProvider>
     </>
   )

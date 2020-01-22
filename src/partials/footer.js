@@ -2,20 +2,28 @@ import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
 
-import links from '../data/footer-links'
+const links = [
+  { link: "/contact", label: 'Contact' },
+  { link: "/privacyverklaring", label: 'Privacyverklaring' },
+]
 
-const Footer = () => (
+const Footer = ({ pathname }) => (
   <StyledFooter>
     <div className='compress'>
       <div className='wrapper'>
         <ul>
           {links.map(link => (
             <li key={link.link}>
-              <Link to={link.link}>{link.label}</Link>
+              <Link 
+                to={link.link} 
+                className={pathname === link.link ? 'active' : ''}
+              >
+                {link.label}
+              </Link>
             </li>
           ))}
         </ul>
-        <Link to='/'>Terug naar boven</Link>
+        <Link to={pathname}>Terug naar boven</Link>
       </div>
     </div>
   </StyledFooter>
@@ -45,6 +53,10 @@ const StyledFooter = styled.footer`
 
     a {
       font-size: 1.125rem;
+
+      &.active {
+        color: ${p => p.theme.colors.cherry};
+      }
     }
   }  
 

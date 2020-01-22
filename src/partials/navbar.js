@@ -3,12 +3,18 @@ import PropTypes from "prop-types"
 import React from "react"
 import styled from 'styled-components'
 
-import links from "../data/links"
 import Logo from '../icons/zhi-dao'
+
+const links = [
+  { link: "/behandelmethoden", label: 'Behandelmethoden' },
+  { link: "/coaching-en-begeleiding", label: 'Coaching en begeleiding' },
+  { link: "/voor-patienten", label: 'Voor Patiënten' },
+  { link: "/voor-bedrijven", label: 'Voor Bedrijven' },
+  { link: "/over-zhi-dao", label: 'Over Zhi Dao' },
+]
 
 const NavBar = ({ pathname }) => (
   <StyledNavBar>
-    {console.log(pathname)}
     <div className='compress'>
       <ul>
         {links.map(link => (
