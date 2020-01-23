@@ -2,18 +2,20 @@ import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
 
-const Grid = ({ link, label }) => (
-  <StyledButton 
-    as={Link} 
-    to={link}
+const Grid = ({ label, ...props }) => (
+  <StyledButton
+    as={Link}
+    {...props}
   >
     {label}
   </StyledButton>
 )
 
+
+
 export default Grid
 
-const StyledButton = styled.div`
+const StyledButton = styled.a`
 
   align-self: stretch;
   height: 60px;
@@ -29,5 +31,9 @@ const StyledButton = styled.div`
 
   padding: 0 20px;
   text-align: center;
+
+  &:hover {
+    background-color: ${p => p.theme.colors.cherry};
+  }
 
 `

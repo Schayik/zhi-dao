@@ -4,21 +4,23 @@ import { graphql } from 'gatsby'
 import Layout from "../partials/layout"
 import Section from "../components/section"
 import Markdown from "../components/markdown"
+import Buttons from "../components/buttons"
 
 const buttons = [
-  { link: '/voor-bedrijven#diensten', label: 'Diensten'},
-  { link: '/voor-bedrijven#opdrachtgevers', label: 'Opdrachtgevers'},
-  { link: '/voor-bedrijven#projecten', label: 'Projecten'},
-  { link: '/voor-bedrijven#publicaties', label: 'Publicaties'},
-  { link: '/voor-bedrijven#trainingen', label: 'Trainingen'},
-  { link: '/voor-bedrijven#portfolio', label: 'Portfolio'},
-  { link: '/voor-bedrijven#Training', label: 'Training'},
+  { to: '/voor-bedrijven#diensten', label: 'Diensten'},
+  { to: '/voor-bedrijven#opdrachtgevers', label: 'Opdrachtgevers'},
+  { to: '/voor-bedrijven#projecten', label: 'Projecten'},
+  { to: '/voor-bedrijven#publicaties', label: 'Publicaties'},
+  { to: '/voor-bedrijven#trainingen', label: 'Trainingen'},
+  { to: '/voor-bedrijven#portfolio', label: 'Portfolio'},
+  { to: '/voor-bedrijven#Training', label: 'Training'},
 ]
 
 const Coaching = ({ data, ...props }) => (
   <Layout {...props} title="Voor bedrijven" >
     <Section>
-      <Markdown html={data.intro.html} buttons={buttons}/>
+      <Markdown html={data.intro.html} />
+      <Buttons buttons={buttons} />
     </Section>
     <Section heading='Diensten' id='diensten'>
       <Markdown html={data.diensten.html} />

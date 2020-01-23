@@ -25,10 +25,25 @@ const StyledGrid = styled.div`
 
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 64px;
+  grid-gap: 4rem;
+
+  @media (max-width: ${p => p.theme.media.max}px) { 
+    grid-gap: 2rem;
+  }
+
+  @media (max-width: ${p => p.theme.media.large}px) {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 4rem;
+  }
+
+  @media (max-width: ${p => p.theme.media.small}px) {
+    grid-template-columns: 1fr;
+  }
 
   .item {
-    height: 420px;
+    margin: 0 auto;
+    max-width: 266px;
+    height: 25rem;
 
     display: flex;
     flex-direction: column;
@@ -36,28 +51,14 @@ const StyledGrid = styled.div`
     align-items: center;
 
     svg {
-      width: 100px;
-      height: 100px;
+      width: 6.25rem;
+      height: 6.25rem;
     }
 
     p {
       text-align: center;
       font-size: 1.125rem;
       line-height: 1.67;
-    }
-
-    a {
-      align-self: stretch;
-      height: 60px;
-      background-color: ${p => p.theme.colors.red};
-
-      color: ${p => p.theme.colors.white};
-      font-size: 1.25rem;
-      font-weight: 700;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
     }
   }
 

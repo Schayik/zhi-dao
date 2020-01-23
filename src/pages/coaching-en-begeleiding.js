@@ -4,54 +4,42 @@ import { graphql } from 'gatsby'
 import Layout from "../partials/layout"
 import Section from "../components/section"
 import Markdown from "../components/markdown"
+import Buttons from "../components/buttons"
+import Image from "../components/Image"
 
 const buttons = [
-  { link: '/coaching-en-begeleiding#voedingsadvies', label: 'Voedingsadvies'},
-  { link: '/coaching-en-begeleiding#levensstijladvies', label: 'Levensstijladvies'},
-  { link: '/coaching-en-begeleiding#familieopstellingen', label: 'Familieopstellingen'},
-  { link: '/coaching-en-begeleiding#coaching', label: 'Coaching'},
-  { link: '/coaching-en-begeleiding#bioenergetische-begeleiding', label: 'Bioenergetische begeleiding'},
+  { to: '/coaching-en-begeleiding#voedingsadvies', label: 'Voedingsadvies'},
+  { to: '/coaching-en-begeleiding#levensstijladvies', label: 'Levensstijladvies'},
+  { to: '/coaching-en-begeleiding#familieopstellingen', label: 'Familieopstellingen'},
+  { to: '/coaching-en-begeleiding#coaching', label: 'Coaching'},
+  { to: '/coaching-en-begeleiding#bioenergetische-begeleiding', label: 'Bioenergetische begeleiding'},
 ]
 
 const Coaching = ({ data, ...props }) => (
-  <Layout {...props} title="Behandelmethoden" >
+  <Layout {...props} title="Coaching en begeleiding" >
     <Section>
-      <Markdown html={data.intro.html} buttons={buttons}/>
+      <Markdown html={data.intro.html} />
+      <Buttons buttons={buttons} />
     </Section>
     <Section heading='Voedingsadvies' id='voedingsadvies'>
-      <Markdown 
-        html={data.voedingsadvies.html} 
-        fixed={data.voedingsadviesImage.childImageSharp.fixed}
-        imageSide='left'
-      />
+      <Image fixed={data.voedingsadviesImage.childImageSharp.fixed} />
+      <Markdown html={data.voedingsadvies.html} />
     </Section>
     <Section heading='Levensstijladvies' id='levensstijladvies'>
-      <Markdown 
-        html={data.levensstijladvies.html} 
-        fixed={data.voedingsadviesImage.childImageSharp.fixed}
-        imageSide='right'
-      />
+      <Markdown html={data.levensstijladvies.html} />
+      <Image fixed={data.voedingsadviesImage.childImageSharp.fixed} side='right' />
     </Section>
     <Section heading='Familieopstellingen' id='familieopstellingen'>
-      <Markdown 
-        html={data.familieopstellingen.html} 
-        fixed={data.voedingsadviesImage.childImageSharp.fixed}
-        imageSide='left'
-      />
+      <Image fixed={data.voedingsadviesImage.childImageSharp.fixed} />
+      <Markdown html={data.familieopstellingen.html} />
     </Section>
     <Section heading='Coaching' id='coaching'>
-      <Markdown 
-        html={data.coaching.html} 
-        fixed={data.voedingsadviesImage.childImageSharp.fixed}
-        imageSide='right'
-      />
+      <Markdown html={data.coaching.html} />
+      <Image fixed={data.voedingsadviesImage.childImageSharp.fixed} side='right' />
     </Section>
     <Section heading='Bioenergetische begeleiding' id='bioenergetische-begeleiding'>
-      <Markdown 
-        html={data.bioenergetischeBegeleiding.html} 
-        fixed={data.voedingsadviesImage.childImageSharp.fixed}
-        imageSide='left'
-      />
+      <Image fixed={data.voedingsadviesImage.childImageSharp.fixed} />
+      <Markdown html={data.bioenergetischeBegeleiding.html} />
     </Section>
   </Layout>
 )

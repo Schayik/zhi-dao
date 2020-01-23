@@ -6,31 +6,38 @@ import styled from 'styled-components'
 import Logo from '../icons/zhi-dao'
 
 const links = [
-  { link: "/behandelmethoden", label: 'Behandelmethoden' },
-  { link: "/coaching-en-begeleiding", label: 'Coaching en begeleiding' },
-  { link: "/voor-patienten", label: 'Voor Patiënten' },
-  { link: "/voor-bedrijven", label: 'Voor Bedrijven' },
-  { link: "/over-zhi-dao", label: 'Over Zhi Dao' },
+  { link: "/behandelmethoden", label: 'Behandelmethoden', small: 'Behandelmethoden' },
+  { link: "/coaching-en-begeleiding", label: 'Coaching en begeleiding', small: 'Coaching' },
+  { link: "/voor-patienten", label: 'Voor Patiënten', small: 'Patiënten' },
+  { link: "/voor-bedrijven", label: 'Voor Bedrijven', small: 'Bedrijven' },
+  { link: "/over-zhi-dao", label: 'Over Zhi Dao', small: 'Over Zhi Dao' },
 ]
+
+const List = ({ className, pathname }) => (
+  <ul className={className}>
+    {links.map(link => (
+      <li key={link.link}>
+        <Link to={link.link} className={pathname === link.link ? 'active' : ''}>
+          {className === 'big' ? link.label : link.small}
+        </Link>
+      </li>
+    ))}
+  </ul>
+)
 
 const NavBar = ({ pathname }) => (
   <StyledNavBar>
     <div className='compress'>
-      <ul>
-        {links.map(link => (
-          <li key={link.link}>
-            <Link to={link.link} className={pathname === link.link ? 'active' : ''}>
-              {link.label}
-            </Link>
-          </li>
-        ))}
-      </ul>
+      <List className='big' pathname={pathname} />
+      <List className='small' pathname={pathname} />
+      <div className='menu' />
       <div className='sidebar'>
-        <Link className='flag' to='/'>
+        <Link to='/' className={pathname === '/' ? 'flag active' : 'flag'}>
           <Logo />
           <h1>Zhi Dao</h1>
         </Link>
       </div>
+      <div className='contact' />
     </div>
   </StyledNavBar>
 )
@@ -44,16 +51,24 @@ const StyledNavBar = styled.nav`
     height: 100%;
   }
 
+  ul.small, .menu, .contact {
+    display: none;
+  }
+
   ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex: 1;
 
-    li {
+    li a {
       font-size: 1.125rem;
 
-      a.active {
+      &:hover {
+        color: ${p => p.theme.colors.red};
+      }
+
+      &.active {
         color: ${p => p.theme.colors.cherry};
       }
     }
@@ -71,6 +86,10 @@ const StyledNavBar = styled.nav`
       right: 32px;
       height: calc(${p => p.theme.navbar.height}px + 40px);
       z-index: 1;
+
+      &:not(.active):hover {
+        background-color: ${p => p.theme.colors.cherry};
+      }
 
       svg {
         position: absolute;
@@ -90,6 +109,20 @@ const StyledNavBar = styled.nav`
       }
     }
   }
+
+  @media (max-width: ${p => p.theme.media.max}px) {
+    ul.big { display: none; }
+    ul.small { display: flex; }
+  }
+  @media (max-width: ${p => p.theme.media.large}px) {
+    ul.small { display: none; }
+    .menu, .contact { 
+      display: block; 
+      flex: 1;
+    }
+  }
+
+
 `
 
 NavBar.propTypes = {

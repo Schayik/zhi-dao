@@ -4,6 +4,25 @@ import { graphql } from "gatsby"
 import Layout from "../partials/layout"
 import Section from "../components/section"
 import Markdown from "../components/markdown"
+import Buttons from "../components/buttons"
+
+const buttons = [
+  { to: '/#nieuws', label: 'Alle Nieuwsberichten'},
+]
+
+const Article = ({ data, ...props }) => (
+  <Layout {...props}
+    title={data.markdownRemark.frontmatter.title}
+    headerHeight={500}
+  >
+    <Section>
+      <Markdown html={data.markdownRemark.html} />
+      <Buttons buttons={buttons} />
+    </Section>
+  </Layout>
+)
+
+export default Article
 
 export const pageQuery = graphql`
   query($path: String!) {
@@ -24,18 +43,6 @@ export const pageQuery = graphql`
     }
   }
 `
-
-const Article = ({ data, ...props }) => (
-  <Layout {...props}
-    title={data.markdownRemark.frontmatter.title}
-  >
-    <Section>
-      <Markdown html={data.markdownRemark.html} />
-    </Section>
-  </Layout>
-)
-
-export default Article
 
 
 

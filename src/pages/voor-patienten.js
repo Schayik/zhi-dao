@@ -10,19 +10,8 @@ const buttons = [
   { to: '/contact', label: 'Contact'},
 ]
 
-export const pageQuery = graphql`
-  query {
-    markdownRemark (
-      fileAbsolutePath: { regex: "/privacyverklaring/" }
-    ) {
-      id
-      html
-    }
-  }
-`
-
-const Privacy = ({ data, ...props }) => (
-  <Layout {...props} title="Privacyverklaring" >
+const Coaching = ({ data, ...props }) => (
+  <Layout {...props} title="Voor patiënten" >
     <Section>
       <Markdown html={data.markdownRemark.html} />
       <Buttons buttons={buttons} />
@@ -30,4 +19,15 @@ const Privacy = ({ data, ...props }) => (
   </Layout>
 )
 
-export default Privacy
+export default Coaching
+
+export const pageQuery = graphql`
+  query {
+    markdownRemark (
+      fileAbsolutePath: { regex: "/voor-patienten/" }
+    ) {
+      id
+      html
+    }
+  }
+`

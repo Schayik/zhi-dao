@@ -32,10 +32,22 @@ const StyledNews = styled.div`
 
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 64px;
+  grid-gap: 4rem;
+
+  @media (max-width: ${p => p.theme.media.max}px) { 
+    grid-gap: 2rem;
+  }
+
+  @media (max-width: ${p => p.theme.media.large}px) {
+    grid-template-columns: 1fr;
+    grid-gap: 4rem;
+    margin: 0 auto;
+    max-width: 548px;
+  }
 
   a.item {
     height: 300px;
+
     position: relative;
     background-color: yellow;
 

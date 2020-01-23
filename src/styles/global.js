@@ -15,6 +15,9 @@ const GlobalStyle = createGlobalStyle`
 
   html {
     scroll-behavior: smooth;
+    @media (max-width: ${p => p.theme.media.max}px) {
+      font-size: 90%;
+    }
   }
 
   body {
@@ -26,7 +29,7 @@ const GlobalStyle = createGlobalStyle`
     overflow-x: hidden;
   }
 
-  h1, h2, h3, h4, h5, h6, p, button {
+  h1, h2, h3, h4, h5, h6, p, button, input, textarea {
     font-family: 'Merriweather', serif;
     font-weight: 400;
     margin: 0;
@@ -55,7 +58,7 @@ const GlobalStyle = createGlobalStyle`
   .compress {
     max-width: 1240px;
     margin: 0 auto;
-    padding: 0 40px;
+    padding: 0 2.5rem;
     height: 100%;
   }
 

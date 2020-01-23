@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { graphql, useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 
-const Header = ({ title, CustomSideBar }) => {
+const Header = ({ title, height, CustomSideBar }) => {
   const data = useStaticQuery(graphql`
     query {
       file(relativePath: {eq: "header-image.jpg"}) {
@@ -20,7 +20,7 @@ const Header = ({ title, CustomSideBar }) => {
   `)
 
   return (
-    <StyledHeader>
+    <StyledHeader height={height}>
       <Img
         className="image"
         fluid={data.file.childImageSharp.fluid}
@@ -40,7 +40,7 @@ const Header = ({ title, CustomSideBar }) => {
 }
 
 const StyledHeader = styled.header`
-  height: 500px;
+  height: ${p => p.height ? p.height : 300}px;
   position: relative;
 
   .image {
@@ -53,6 +53,10 @@ const StyledHeader = styled.header`
     display: flex;
     justify-content: flex-end;
     height: 100%;
+
+    @media (max-width: ${p => p.theme.media.large}px) {
+      justify-content: center;
+    } 
 
     .sidebar {
       width: ${p => p.theme.sidebar.width}px;

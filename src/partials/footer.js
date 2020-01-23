@@ -54,6 +54,10 @@ const StyledFooter = styled.footer`
     a {
       font-size: 1.125rem;
 
+      &:hover {
+        color: ${p => p.theme.colors.red};
+      }
+
       &.active {
         color: ${p => p.theme.colors.cherry};
       }

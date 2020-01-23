@@ -1,14 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import Button from '../components/button'
+
 const HomeSideBar = () => (
   <StyledBar>
     <div>
       <h1>Zhi &bull; Dao</h1>
       <h2>[zhi dao]</h2>
     </div>
-    <h3><strong>De man die met zijn vinger de goede weg wijst</strong> Traditioneel Chenese Geneeskunde en Advies</h3>
-    <button>Afspraak Maken</button>
+    <h3><strong>De man die met zijn vinger de goede weg wijst</strong> Traditioneel Chinese Geneeskunde en Advies</h3>
+    <Button to='/contact' label='Afspraak maken' />
   </StyledBar>
 )
 
@@ -20,7 +22,7 @@ const StyledBar = styled.div`
   justify-content: space-evenly;
   align-items: center;
 
-  h1, h2, h3, button {
+  h1, h2, h3 {
     text-align: center;
   }
 
@@ -38,19 +40,5 @@ const StyledBar = styled.div`
   h3 {
     font-size: 1.25rem;
     line-height: 1.5;
-  }
-
-  button {
-    background-color: ${p => p.theme.colors.red};
-    height: 58px;
-    align-self: stretch;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    color: ${p => p.theme.colors.white};
-    font-size: 1.25rem;
-    font-weight: 700;
   }
 `
