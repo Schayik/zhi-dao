@@ -18,6 +18,9 @@ const GlobalStyle = createGlobalStyle`
     @media (max-width: ${p => p.theme.media.max}px) {
       font-size: 90%;
     }
+    @media (max-width: ${p => p.theme.media.small}px) {
+      font-size: 70%;
+    }
   }
 
   body {
@@ -53,6 +56,7 @@ const GlobalStyle = createGlobalStyle`
   button {
     background-color: transparent;
     border: none;
+    padding: 0;
   }
 
   .compress {
@@ -60,6 +64,9 @@ const GlobalStyle = createGlobalStyle`
     margin: 0 auto;
     padding: 0 2.5rem;
     height: 100%;
+    @media (max-width: ${p => p.theme.media.small}px) {
+      padding: 0 1.25rem;
+    }
   }
 
 `

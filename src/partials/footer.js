@@ -23,7 +23,7 @@ const Footer = ({ pathname }) => (
             </li>
           ))}
         </ul>
-        <Link to={pathname}>Terug naar boven</Link>
+        <Link className='back' to={pathname}>Terug naar boven</Link>
       </div>
     </div>
   </StyledFooter>
@@ -32,12 +32,14 @@ const Footer = ({ pathname }) => (
 export default Footer
 
 const StyledFooter = styled.footer`
-  margin-top: 100px;
-  height: 100px;
+  margin-top: 6.25rem;
+  /* height: 6.25rem; */
+  
 
   .wrapper {
     border-top: 1px solid ${p => p.theme.colors.black};
-    height: 100%;
+    padding: 2.5rem 0;
+    /* height: 100%; */
 
     display: flex;
     align-items: center;
@@ -63,6 +65,20 @@ const StyledFooter = styled.footer`
       }
     }
   }  
+
+  @media (max-width: ${p => p.theme.media.small}px) {
+    height: auto;
+
+    .wrapper, .wrapper ul { 
+      flex-direction: column;
+      align-items: center;
+    } 
+
+    .wrapper ul li {
+      margin: 0;
+      margin-bottom: 20px;
+    }
+  }
 
 `
 

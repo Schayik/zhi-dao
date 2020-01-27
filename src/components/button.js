@@ -18,7 +18,7 @@ export default Grid
 const StyledButton = styled.a`
 
   align-self: stretch;
-  height: 60px;
+  height: 3.75rem;
   background-color: ${p => p.theme.colors.red};
 
   color: ${p => p.theme.colors.white};
@@ -29,11 +29,10 @@ const StyledButton = styled.a`
   align-items: center;
   justify-content: center;
 
-  padding: 0 20px;
+  padding: 0 1.25rem;
   text-align: center;
 
   &:hover {
     background-color: ${p => p.theme.colors.cherry};
   }
-
 `

@@ -26,7 +26,7 @@ const StyledHeading = styled.div`
     color: ${p => p.theme.colors.cherry};
     font-size: 1.25rem;
     font-weight: 700;
-    margin: 0 20px;
+    margin: 0 1.25rem;
   }
 
 `

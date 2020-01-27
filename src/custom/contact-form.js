@@ -16,7 +16,7 @@ const Form = () => {
 
       <p>Voor het maken van een afspraak, kunt u onderstaand formulier invullen. U krijgt dan een bevesiging toegestuurd of de praktijk neemt contact met u op voor een nadere afspraak.</p>
 
-      <label>Naam</label>
+      <label htmlFor="name">Naam</label>
       {errors.name && <p className='error'>{errors.name.message}</p>}
       <input
         name="name"
@@ -25,7 +25,7 @@ const Form = () => {
         })}
       />
         
-      <label>E-mailadres</label>
+      <label htmlFor="email">E-mailadres</label>
       {errors.email && <p className='error'>{errors.email.message}</p>}
       <input
         name="email"
@@ -38,7 +38,7 @@ const Form = () => {
         })}
       />
 
-      <label>Voorkeursdag en voorkeurstijd</label>
+      <label htmlFor="voorkeur">Voorkeursdag en voorkeurstijd</label>
       {errors.voorkeur && <p className='error'>{errors.voorkeur.message}</p>}
       <textarea
         name="voorkeur"

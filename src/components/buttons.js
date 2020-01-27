@@ -21,9 +21,9 @@ export default Buttons
 
 const StyledButtons = styled.div`
   flex-shrink: 0;
-  width: ${p => p.theme.sidebar.width}px;
+  width: ${p => p.theme.sidebar.width};
 
-  padding: 0 32px;
+  padding: 0 2rem;
   margin-left: 32px;
 
   li:not(:first-child) {
@@ -33,5 +33,10 @@ const StyledButtons = styled.div`
   p {
     font-size: 1.25rem;
     line-height: 1.5;
+  }
+
+  @media (max-width: ${p => p.theme.media.large}px) {
+    order: -1;
+    margin: 0 auto 4rem auto;
   }
 `

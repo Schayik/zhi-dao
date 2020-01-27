@@ -3,7 +3,10 @@ import PropTypes from "prop-types"
 import React from "react"
 import styled from 'styled-components'
 
+import List from './List'
+import Menu from './Menu'
 import Logo from '../icons/zhi-dao'
+import MailIcon from '../icons/contact.js'
 
 const links = [
   { link: "/behandelmethoden", label: 'Behandelmethoden', small: 'Behandelmethoden' },
@@ -13,78 +16,83 @@ const links = [
   { link: "/over-zhi-dao", label: 'Over Zhi Dao', small: 'Over Zhi Dao' },
 ]
 
-const List = ({ className, pathname }) => (
-  <ul className={className}>
-    {links.map(link => (
-      <li key={link.link}>
-        <Link to={link.link} className={pathname === link.link ? 'active' : ''}>
-          {className === 'big' ? link.label : link.small}
-        </Link>
-      </li>
-    ))}
-  </ul>
-)
+const linksSmall = [
+  { link: "/behandelmethoden", label: 'Behandelmethoden' },
+  { link: "/coaching-en-begeleiding", label: 'Coaching' },
+  { link: "/voor-patienten", label: 'Patiënten' },
+  { link: "/voor-bedrijven", label: 'Bedrijven' },
+  { link: "/over-zhi-dao", label: 'Over Zhi Dao' },
+]
 
 const NavBar = ({ pathname }) => (
   <StyledNavBar>
     <div className='compress'>
-      <List className='big' pathname={pathname} />
-      <List className='small' pathname={pathname} />
-      <div className='menu' />
+      <List className='big' links={links} pathname={pathname} />
+      <List className='small' links={linksSmall} pathname={pathname} />
+      <Menu className='menu' links={links} />
       <div className='sidebar'>
         <Link to='/' className={pathname === '/' ? 'flag active' : 'flag'}>
           <Logo />
           <h1>Zhi Dao</h1>
         </Link>
       </div>
-      <div className='contact' />
+      <div className='contact'>
+        <Link to='/contact'>
+          <MailIcon />
+        </Link>
+      </div>
     </div>
   </StyledNavBar>
 )
 
 const StyledNavBar = styled.nav`
 
-  height: ${p => p.theme.navbar.height}px;
+  height: ${p => p.theme.navbar.height};
 
   .compress {
     display: flex;
     height: 100%;
   }
 
-  ul.small, .menu, .contact {
-    display: none;
-  }
-
-  ul {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  .contact {
     flex: 1;
+    display: none;
+    align-items: center;
+    justify-content: flex-end;
 
-    li a {
-      font-size: 1.125rem;
+    a {
+      height: 2.5rem;
+      max-width: 2.5rem;
+      width: 100%;
 
-      &:hover {
-        color: ${p => p.theme.colors.red};
-      }
-
-      &.active {
-        color: ${p => p.theme.colors.cherry};
+      svg {
+        width: 100%;
+        height: 100%;
       }
     }
   }
 
+  .small, .menu, .contact { display: none; }
+  @media (max-width: ${p => p.theme.media.max}px) {
+    .big { display: none; }
+    .small { display: flex; }
+  }
+  @media (max-width: ${p => p.theme.media.large}px) {
+    .small { display: none; }
+    .menu, .contact { display: flex; }
+  }
+  
   .sidebar {
     flex-shrink: 0;
-    width: ${p => p.theme.sidebar.width}px;
+    width: ${p => p.theme.sidebar.width};
     position: relative;
 
     a.flag {
       background-color: ${p => p.theme.colors.red};
       position: absolute;
-      left: 32px;
-      right: 32px;
-      height: calc(${p => p.theme.navbar.height}px + 40px);
+      left: 2rem;
+      right: 2rem;
+      height: calc(${p => p.theme.navbar.height} + 2.5rem);
       z-index: 1;
 
       &:not(.active):hover {
@@ -93,36 +101,22 @@ const StyledNavBar = styled.nav`
 
       svg {
         position: absolute;
-        left: 32px;
-        top: 20px;
-        width: 160px;
+        left: 2rem;
+        top: 1.25rem;
+        width: 10rem;
       }
 
       h1 {
         position: absolute;
-        right: 32px;
-        bottom: 20px;
+        right: 2rem;
+        bottom: 1.25rem;
         color: ${p => p.theme.colors.white};
-        font-size: 40px;
+        font-size: 2.5rem;
         font-style: italic;
         line-height: .8;
       }
     }
   }
-
-  @media (max-width: ${p => p.theme.media.max}px) {
-    ul.big { display: none; }
-    ul.small { display: flex; }
-  }
-  @media (max-width: ${p => p.theme.media.large}px) {
-    ul.small { display: none; }
-    .menu, .contact { 
-      display: block; 
-      flex: 1;
-    }
-  }
-
-
 `
 
 NavBar.propTypes = {

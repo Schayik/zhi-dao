@@ -1,9 +1,9 @@
 const THEME = {
   navbar: {
-    height: 100,
+    height: '6.25rem',
   },
   sidebar: {
-    width: 320,
+    width: '20rem',
   },
   colors: {
     black: '#000000',

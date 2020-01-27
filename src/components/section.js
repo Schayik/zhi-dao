@@ -30,5 +30,12 @@ const StyledSection = styled.section`
 
   .wrapper {
     display: flex;
+    @media (max-width: ${p => p.theme.media.large}px) {
+      flex-direction: column;
+    }
+  }
+
+  @media (max-width: ${p => p.theme.media.small}px) {
+    padding-top: 4rem;
   }
 `

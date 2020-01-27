@@ -33,7 +33,7 @@ const StyledGrid = styled.div`
 
   @media (max-width: ${p => p.theme.media.large}px) {
     grid-template-columns: 1fr 1fr;
-    grid-gap: 4rem;
+    grid-gap: 8rem 4rem;
   }
 
   @media (max-width: ${p => p.theme.media.small}px) {
@@ -42,7 +42,7 @@ const StyledGrid = styled.div`
 
   .item {
     margin: 0 auto;
-    max-width: 266px;
+    max-width: 16.625rem;
     height: 25rem;
 
     display: flex;

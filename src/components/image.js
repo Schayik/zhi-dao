@@ -19,4 +19,12 @@ const StyledImage = styled.div`
 
   &:first-child { margin-right: 72px; }
   &:last-child { margin-left: 72px; }
+
+  @media (max-width: ${p => p.theme.media.large}px) {
+    order: -1;
+    && { margin: 0 auto 2rem auto; }
+    /* width: 100%; */
+    max-width: 100%;
+    max-height: 60vw;
+  }
 `

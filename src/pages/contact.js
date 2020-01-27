@@ -1,16 +1,18 @@
 import React from "react"
+import { graphql } from 'gatsby'
 
 import Layout from "../partials/layout"
 import Section from "../components/section"
 import Buttons from '../components/buttons'
 
-import ContactForm from '../custom/contact-form'
+// import ContactForm from '../custom/contact-form'
 import ContactRoute from '../custom/contact-route'
 
 const Contact = ({ data, ...props }) => (
   <Layout {...props} title="Contact" >
     <Section>
-      <ContactForm />
+      {/* <ContactForm /> */}
+      <div style={{ flex: 1 }} />
       <Buttons buttons={buttons} />
     </Section>
     <Section heading='Route'>

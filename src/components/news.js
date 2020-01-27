@@ -47,6 +47,7 @@ const StyledNews = styled.div`
 
   a.item {
     height: 300px;
+    max-height: 60vw;
 
     position: relative;
     background-color: yellow;
@@ -67,10 +68,10 @@ const StyledNews = styled.div`
     }
 
     .date {
-      top: 32px;
+      top: 2rem;
       left: 0px;
-      width: 128px;
-      height: 64px;
+      width: 8rem;
+      height: 4rem;
 
       p {
         color: ${p => p.theme.colors.cherry};
@@ -83,7 +84,7 @@ const StyledNews = styled.div`
       width: 100%;
 
       h3 {
-        padding: 20px;
+        padding: 1.25rem;
         font-size: 1.25rem;
         font-weight: 700;
         text-align: center;

@@ -70,7 +70,7 @@ export const pageQuery = graphql`
 `
 
 const IndexPage = ({ data, ...props }) => (
-  <Layout {...props} title="Home" CustomSideBar={HomeSideBar} headerHeight={500}>
+  <Layout {...props} title="Home" CustomSideBar={HomeSideBar} headerHeight='31.25rem'>
     <Section 
       heading="Informatie"
     >

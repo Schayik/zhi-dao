@@ -40,7 +40,7 @@ const Header = ({ title, height, CustomSideBar }) => {
 }
 
 const StyledHeader = styled.header`
-  height: ${p => p.height ? p.height : 300}px;
+  height: ${p => p.height ? p.height : '18.75rem'};
   position: relative;
 
   .image {
@@ -59,10 +59,10 @@ const StyledHeader = styled.header`
     } 
 
     .sidebar {
-      width: ${p => p.theme.sidebar.width}px;
+      width: ${p => p.theme.sidebar.width};
       background-color: ${p => p.theme.colors.whiteOverlay};
 
-      padding: 40px 32px 0 32px;
+      padding: 2.5rem 2rem 0 2rem;
 
       display: flex;
       justify-content: center;
