@@ -90,6 +90,12 @@ const StyledNews = styled.div`
         text-align: center;
       }
     }
+
+    &:hover {
+      .title {
+        background-color: ${p => p.theme.colors.red};
+      }
+    }
   }
 
 `

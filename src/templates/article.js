@@ -13,7 +13,7 @@ const buttons = [
 const Article = ({ data, ...props }) => (
   <Layout {...props}
     title={data.markdownRemark.frontmatter.title}
-    headerHeight={500}
+    headerHeight={'31.25rem'}
   >
     <Section>
       <Markdown html={data.markdownRemark.html} />

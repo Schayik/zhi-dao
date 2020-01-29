@@ -19,6 +19,7 @@ function SEO({ description, lang, meta, title }) {
             title
             description
             author
+            lang
           }
         }
       }
@@ -26,11 +27,14 @@ function SEO({ description, lang, meta, title }) {
   )
 
   const metaDescription = description || site.siteMetadata.description
+  const metaLang = lang || site.siteMetadata.lang
 
+  console.log(metaLang)
+  
   return (
     <Helmet
       htmlAttributes={{
-        lang,
+        lang: metaLang,
       }}
       title={title}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
@@ -73,7 +77,6 @@ function SEO({ description, lang, meta, title }) {
 }
 
 SEO.defaultProps = {
-  lang: `en`,
   meta: [],
   description: ``,
 }
