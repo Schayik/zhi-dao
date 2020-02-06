@@ -1,48 +1,69 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
 import Img from 'gatsby-image'
 
-const News = ({ edges }) => (
-  <StyledNews>
-    {edges.map(({ node: { frontmatter } }) => (
-      <Link 
-        key={frontmatter.path}
-        className='item' 
-        to={frontmatter.path}
-      >
-        <Img 
-          fluid={frontmatter.featuredImage.childImageSharp.fluid}
-          className='image'
-        />
-        <div className='date'>
-          <p><strong>{frontmatter.day}</strong> {frontmatter.month}</p>
+import Button from './button'
+
+const News = ({ edges }) => {
+
+  const [showAmount, setAmount] = useState(2)
+
+  const edgesToShow = edges.slice(0, showAmount)
+  const increaseAmount = () => {
+    setAmount(showAmount + 2)
+  }
+
+  return (
+    <StyledNews>
+      <div className='grid-wrapper'>
+        {edgesToShow.map(({ node: { frontmatter } }) => (
+          <Link
+            key={frontmatter.path}
+            className='item'
+            to={frontmatter.path}
+          >
+            <Img
+              fluid={frontmatter.featuredImage.childImageSharp.fluid}
+              className='image'
+            />
+            <div className='date'>
+              <p><strong>{frontmatter.day}</strong> {frontmatter.month}</p>
+            </div>
+            <div className='title'>
+              <h3>{frontmatter.title}</h3>
+            </div>
+          </Link>
+        ))}
+      </div>
+      {showAmount < edges.length &&
+        <div className='button-positioner'>
+          <Button as='button' onClick={increaseAmount} label='Meer Nieuws' />
         </div>
-        <div className='title'>
-          <h3>{frontmatter.title}</h3>
-        </div>
-      </Link>
-    ))}
-  </StyledNews>
-)
+      }
+    </StyledNews>
+  )
+}
 
 export default News
 
 const StyledNews = styled.div`
 
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 4rem;
-
-  @media (max-width: ${p => p.theme.media.max}px) { 
-    grid-gap: 2rem;
-  }
-
-  @media (max-width: ${p => p.theme.media.large}px) {
-    grid-template-columns: 1fr;
+  .grid-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     grid-gap: 4rem;
-    margin: 0 auto;
-    max-width: 548px;
+
+    @media (max-width: ${p => p.theme.media.max}px) { 
+      grid-gap: 2rem;
+    }
+
+    @media (max-width: ${p => p.theme.media.large}px) {
+      grid-template-columns: 1fr;
+      grid-gap: 4rem;
+      margin: 0 auto;
+      max-width: 548px;
+    }
   }
 
   a.item {
@@ -50,7 +71,6 @@ const StyledNews = styled.div`
     max-height: 60vw;
 
     position: relative;
-    background-color: yellow;
 
     .image {
       width: 100%;
@@ -91,9 +111,24 @@ const StyledNews = styled.div`
       }
     }
 
-    &:hover {
-      .title {
+    &:hover {   
+      .date, .title {
         background-color: ${p => p.theme.colors.red};
+        p, h3 {
+          color: ${p => p.theme.colors.white};
+        }
+      }
+    }
+  }
+
+  .button-positioner {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 4rem;
+    button {
+      width: 16rem;
+      &:hover {
+        cursor: pointer;
       }
     }
   }
