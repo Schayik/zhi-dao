@@ -1,12 +1,12 @@
 import React from "react"
 import styled from 'styled-components'
-import { Link } from 'gatsby'
+import { Link, withPrefix } from 'gatsby'
 
 const List = ({ links, className, pathname }) => (
   <StyledList className={className}>
     {links.map(link => (
       <li key={link.link}>
-        <Link to={link.link} className={pathname === link.link ? 'active' : ''}>
+        <Link to={link.link} className={pathname === withPrefix(link.link) ? 'active' : ''}>
           {link.label}
         </Link>
       </li>

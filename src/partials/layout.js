@@ -19,7 +19,7 @@ import GlobalStyle from '../styles/global'
 import THEME from '../styles/theme'
 // import "../styles/gatsby.css"
 
-const Layout = ({ children, title, CustomSideBar, location, headerHeight }) => {
+const Layout = ({ children, title, CustomSideBar, location, headerHeight, ...props }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -29,6 +29,9 @@ const Layout = ({ children, title, CustomSideBar, location, headerHeight }) => {
       }
     }
   `)
+
+  console.log(location)
+  console.log(props)
 
   return (
     <>

@@ -1,4 +1,4 @@
-import { Link } from "gatsby"
+import { Link, withPrefix } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import styled from 'styled-components'
@@ -31,7 +31,7 @@ const NavBar = ({ pathname }) => (
       <List className='small' links={linksSmall} pathname={pathname} />
       <Menu className='menu' links={links} />
       <div className='sidebar'>
-        <Link to='/' className={pathname === '/' ? 'flag active' : 'flag'}>
+        <Link to='/' className={pathname === withPrefix('/') ? 'flag active' : 'flag'}>
           <Logo />
           <h1>Zhi Dao</h1>
         </Link>

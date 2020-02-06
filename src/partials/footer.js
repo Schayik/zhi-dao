@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Link } from 'gatsby'
+import { Link, withPrefix } from 'gatsby'
 
 const links = [
   { link: "/contact", label: 'Contact' },
@@ -16,7 +16,7 @@ const Footer = ({ pathname }) => (
             <li key={link.link}>
               <Link 
                 to={link.link} 
-                className={pathname === link.link ? 'active' : ''}
+                className={pathname === withPrefix(link.link) ? 'active' : ''}
               >
                 {link.label}
               </Link>
