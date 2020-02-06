@@ -27,20 +27,20 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-7f3dc121759a9ca0769e.js"
+    "url": "webpack-runtime-1aca83e4f616c25d4c3b.js"
   },
   {
-    "url": "commons-17ca82ad68354201bd43.js"
+    "url": "commons-334bbfea6a2621aacfe8.js"
   },
   {
-    "url": "app-997a54b4d5932daec5f9.js"
+    "url": "app-e1b51dfa00602df4dc45.js"
   },
   {
     "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-25248a3ece515bddc791.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "7be9bdcf8b516bdd57de532af5503b98"
+    "revision": "eda404e1795de4ea703c255e484618d1"
   },
   {
     "url": "google-fonts/s/merriweather/v21/u-440qyriQwlOrhSvowK_l5-fCZM.woff2",
@@ -160,12 +160,12 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   lastNavigationRequest = event.request.url
 
   let { pathname } = new URL(event.request.url)
-  pathname = pathname.replace(new RegExp(`^`), ``)
+  pathname = pathname.replace(new RegExp(`^/zhi-dao`), ``)
 
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/app-997a54b4d5932daec5f9.js`))) {
+  if (!resources || !(await caches.match(`/zhi-dao/app-e1b51dfa00602df4dc45.js`))) {
     return await fetch(event.request)
   }
 
@@ -178,7 +178,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
     }
   }
 
-  const offlineShell = `/offline-plugin-app-shell-fallback/index.html`
+  const offlineShell = `/zhi-dao/offline-plugin-app-shell-fallback/index.html`
   const offlineShellWithKey = workbox.precaching.getCacheKeyForURL(offlineShell)
   return await caches.match(offlineShellWithKey)
 })
