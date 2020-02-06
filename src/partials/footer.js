@@ -23,7 +23,7 @@ const Footer = ({ pathname }) => (
             </li>
           ))}
         </ul>
-        <Link className='back' to={pathname}>Terug naar boven</Link>
+        <a className='back' href='#top'>Terug naar boven</a>
       </div>
     </div>
   </StyledFooter>

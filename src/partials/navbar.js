@@ -26,6 +26,7 @@ const linksSmall = [
 
 const NavBar = ({ pathname }) => (
   <StyledNavBar>
+    <a name='top' />
     <div className='compress'>
       <List className='big' links={links} pathname={pathname} />
       <List className='small' links={linksSmall} pathname={pathname} />
