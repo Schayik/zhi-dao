@@ -108,7 +108,6 @@ const StyledMenu = styled.div`
       transform: translateX(-100%);
     }
         
-
     li {
       margin-top: 2.5rem;
       a {
