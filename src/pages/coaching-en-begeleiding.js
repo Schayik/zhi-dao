@@ -5,7 +5,7 @@ import Layout from "../partials/layout"
 import Section from "../components/section"
 import Markdown from "../components/markdown"
 import Buttons from "../components/buttons"
-import Image from "../components/Image"
+import Image from "../components/image"
 
 const buttons = [
   { to: '/coaching-en-begeleiding#voedingsadvies', label: 'Voedingsadvies'},

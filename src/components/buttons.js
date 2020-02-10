@@ -24,7 +24,7 @@ const StyledButtons = styled.div`
   width: ${p => p.theme.sidebar.width};
 
   padding: 0 2rem;
-  margin-left: 32px;
+  margin-left: 2rem;
 
   li:not(:first-child) {
     margin-top: 20px;

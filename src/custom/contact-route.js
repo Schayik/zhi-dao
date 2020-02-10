@@ -4,8 +4,8 @@ import Img from 'gatsby-image'
 
 const Route = ({ fluid1, fluid2 }) => (
   <StyledRoute>
-    <Img fluid={fluid1} />
-    <Img className='image-2' fluid={fluid2} />
+    <Img className='image' fluid={fluid1} />
+    <Img className='image' fluid={fluid2} />
     <ul>
       <li>1. In Venray de borden richting het Ziekenhuis volgen.</li>
       <li>2. Het ziekenhuis voorbij rijden</li>
@@ -17,8 +17,10 @@ const Route = ({ fluid1, fluid2 }) => (
 export default Route
 
 const StyledRoute = styled.div`
-  .image-2 {
-    margin: 64px 0;
+  .image {
+    margin-bottom: 4rem;
+    width: 100%;
+    height: 16rem;
   }
 
   ul {

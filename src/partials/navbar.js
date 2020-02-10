@@ -24,9 +24,10 @@ const linksSmall = [
   { link: "/over-zhi-dao", label: 'Over Zhi Dao' },
 ]
 
+
 const NavBar = ({ pathname }) => (
   <StyledNavBar>
-    <a name='top' />
+    <div id='top' />
     <div className='compress'>
       <List className='big' links={links} pathname={pathname} />
       <List className='small' links={linksSmall} pathname={pathname} />
@@ -77,10 +78,12 @@ const StyledNavBar = styled.nav`
   @media (max-width: ${p => p.theme.media.max}px) {
     .big { display: none; }
     .small { display: flex; }
+    .sidebar { margin-left: 2rem; }
   }
   @media (max-width: ${p => p.theme.media.large}px) {
     .small { display: none; }
     .menu, .contact { display: flex; }
+    .sidebar { margin-left: 0; }
   }
   
   .sidebar {

@@ -1,27 +1,39 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from "react";
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 
 import MenuIcon from '../icons/menu.js'
 
+import useOutsideAlerter from '../hooks/useOutsideAlerter'
+
 const Menu = ({ links }) => {
 
   const [isOpen, setOpen] = useState(false)
 
+  const wrapperRef = useRef(null);
+
+  const handleClickOutside = () => {
+    document.body.style.overflowY = "auto"
+
+    setOpen(false)
+  }
+
   const handleClick = () => {
     isOpen
-      ? document.body.style.overflow = "auto"
-      : document.body.style.overflow = "hidden"
-    
+      ? document.body.style.overflowY = "auto"
+      : document.body.style.overflowY = "hidden"
+
     setOpen(!isOpen)
   }
 
+  useOutsideAlerter(wrapperRef, handleClickOutside);
+
   return (
-    <StyledMenu open={isOpen}>
+    <StyledMenu open={isOpen} ref={wrapperRef}>
       <button
         onClick={handleClick}
         aria-expanded={isOpen ? "true" : "false"}
-        aria-controls="menu" 
+        aria-controls="menu"
       >
         <MenuIcon />
       </button>
@@ -76,8 +88,9 @@ const StyledMenu = styled.div`
     z-index: 2;
 
     top: 0;
-    bottom: 0;
     left: 0;
+
+    height: 100%;
 
     padding: 2.5rem;
     padding-top: ${p => p.theme.navbar.height};
@@ -101,10 +114,8 @@ const StyledMenu = styled.div`
       a {
         color: ${p => p.theme.colors.white};
         font-size: 1.25rem;
+        font-weight: 700;
       }
     }
   }
-
-
-
 `
