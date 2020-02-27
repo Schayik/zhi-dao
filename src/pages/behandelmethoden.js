@@ -10,6 +10,7 @@ import Image from '../components/image'
 
 const buttons = [
   { to: '/behandelmethoden#acupunctuur', label: 'Acupunctuur' },
+  { to: '/behandelmethoden#moxatherapie-en-cupping', label: 'Moxatherapie en cupping' },
   { to: '/behandelmethoden#kruidengeneeskunde', label: 'Kruidengeneeskunde' },
   { to: '/behandelmethoden#tai-chi-chuan', label: "T'ai Chi Chuan" },
   { to: '/behandelmethoden#qi-gong', label: 'Qi Gong' },
@@ -25,6 +26,10 @@ const Behandelmethoden = ({ data, ...props }) => (
     <Section heading='Acupunctuur' id='acupunctuur'>
       <Image fixed={data.acupunctuurImage.childImageSharp.fixed} />
       <Markdown html={data.acupunctuur.html} />
+    </Section>
+    <Section heading='Moxatherapie en cupping' id='moxatherapie-en-cupping'>
+      <Image fixed={data.acupunctuurImage.childImageSharp.fixed} />
+      <Markdown html={data.moxatherapieEnCupping.html} />
     </Section>
     <Section heading='Kruidengeneeskunde' id='kruidengeneeskunde'>
       <Markdown html={data.kruidengeneeskunde.html} />
@@ -62,6 +67,9 @@ export const pageQuery = graphql`
     ) { id html }
     acupunctuur: markdownRemark (
       fileAbsolutePath: { regex: "/behandelmethoden/acupunctuur/" }
+    ) { id html }
+    moxatherapieEnCupping: markdownRemark (
+      fileAbsolutePath: { regex: "/behandelmethoden/moxatherapie-en-cupping/" }
     ) { id html }
     kruidengeneeskunde: markdownRemark (
       fileAbsolutePath: { regex: "/behandelmethoden/kruidengeneeskunde/" }

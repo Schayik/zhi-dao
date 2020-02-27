@@ -11,7 +11,7 @@ import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
 function SEO({ description, lang, meta, title }) {
-  const { site } = useStaticQuery(
+  const { site, file } = useStaticQuery(
     graphql`
       query {
         site {
@@ -22,20 +22,29 @@ function SEO({ description, lang, meta, title }) {
             lang
           }
         }
+        file( relativePath: {eq: "favicon-512x512.png"} ) {
+          id
+          childImageSharp {
+            fixed ( width: 144, height: 144 ) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
       }
     `
   )
 
   const metaDescription = description || site.siteMetadata.description
   const metaLang = lang || site.siteMetadata.lang
+  const metaTitle = site.siteMetadata.title + (title ? ` | ${title}` : '')
   
   return (
     <Helmet
       htmlAttributes={{
         lang: metaLang,
       }}
-      title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      title={metaTitle}
+      // titleTemplate={`%s | ${site.siteMetadata.title}`}
       meta={[
         {
           name: `description`,
@@ -43,7 +52,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `og:title`,
-          content: title,
+          content: metaTitle,
         },
         {
           property: `og:description`,
@@ -63,11 +72,15 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `twitter:title`,
-          content: title,
+          content: metaTitle,
         },
         {
           name: `twitter:description`,
           content: metaDescription,
+        },
+        {
+          name: `twitter:image`,
+          content: file.childImageSharp.fixed.src,
         },
       ].concat(meta)}
     />
