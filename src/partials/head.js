@@ -80,7 +80,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `twitter:image`,
-          content: file.childImageSharp.fixed.src,
+          href: file.childImageSharp.fixed.src,
         },
       ].concat(meta)}
     />
