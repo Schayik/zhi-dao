@@ -1,3 +1,8 @@
+---
+title: Acupunctuur
+featuredImage: ../images/branch.png
+---
+
 Acupunctuur is een bekende behandelmethode uit de klassieke Chinese geneeskunde, en is ontstaan al meer dan 2500 jaar geleden. Hierbij worden metalen naalden op zogenaamde acupunctuurpunten in het lichaam gestoken. De acupunctuurpunten hebben een werking in het lichaam door Qi (energie) te beïnvloeden in de meridianen (energiebanen) en daarmee klachten te verlichten en op te heffen.
 
 De westerse en de Chinese geneeskunde hanteren andere denkwijzen bij het integraal of holistisch benaderen van een gezondheidsprobleem. De klassieke Chinese geneeskunde ziet een aandoening als een verstoring van onze energiebalans. De behandeling is een middel om die toestand terug in evenwicht te brengen. Zo speelt acupunctuur in op onze lichamelijke, geestelijke en emotionele toestand.

@@ -19,7 +19,7 @@ import GlobalStyle from '../styles/global'
 import THEME from '../styles/theme'
 // import "../styles/gatsby.css"
 
-const Layout = ({ children, title, CustomSideBar, location, headerHeight }) => {
+const Layout = ({ children, title, CustomSideBar, location, headerSize, headerImageFluid }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -36,7 +36,7 @@ const Layout = ({ children, title, CustomSideBar, location, headerHeight }) => {
         <GlobalStyle />
         <Head title={title} />
         <NavBar siteTitle={data.site.siteMetadata.title} pathname={location && location.pathname} />
-        <Header title={title} CustomSideBar={CustomSideBar} height={headerHeight} />
+        <Header title={title} CustomSideBar={CustomSideBar} size={headerSize} fluid={headerImageFluid} />
         <main>{children}</main>
         <Footer pathname={location && location.pathname} />
       </ThemeProvider>

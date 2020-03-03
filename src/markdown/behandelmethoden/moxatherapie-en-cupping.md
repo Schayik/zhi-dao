@@ -1,5 +1,6 @@
 ---
 title: Moxatherapie en cupping
+featuredImage: ../images/branch.png
 ---
 
 Moxatherapie is het branden van een gedroogd kruid (Bijvoetkruid) als los kruid of in de vorm van een opgerolde staaf. Dit wordt vlak bij de te behandelen plaats op het lichaam gehouden. Door de warmte en stimulering van de bloeddoorstroming wordt het weefsel behandeld. Ook wordt moxatherapie gebruikt bij acupunctuur gebruikt om via het verwarmen van de naald het behandeleffect te versterken.

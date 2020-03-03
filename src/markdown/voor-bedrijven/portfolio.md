@@ -1,3 +1,7 @@
+---
+title: Portfolio
+---
+
 **Interim Management**
 
 Waar professionele begeleiding en coaching van personeel nodig is, waar veranderingstrajecten moeten plaatsvinden en waar vooruitgang nodig is, vanaf middle management tot bestuurlijk niveau.

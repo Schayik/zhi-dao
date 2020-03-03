@@ -8,10 +8,6 @@ const Image = ({ fixed }) => (
 
 export default Image
 
-Image.defaultProps = {
-  side: 'left'
-}
-
 const StyledImage = styled.div`
   flex-shrink: 0;
   width: 360px;

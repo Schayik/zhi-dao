@@ -1,3 +1,7 @@
+---
+title: Projecten
+---
+
 Van onderstaande projecten zijn op aanvraag nadere geanonimiseerde projectbeschrijvingen beschikbaar. 
 
 **Strategisch Management**

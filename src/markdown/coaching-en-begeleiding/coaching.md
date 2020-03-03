@@ -1,3 +1,8 @@
+---
+title: Coaching
+featuredImage: ../images/branch.png
+---
+
 Coaching is een vorm van begeleiding die erop gericht is mensen in positieve zin te veranderen, en gebaseerd op veranderingsmogelijkheden die liggen besloten in de blijvende wisselwerking tussen inzicht en gedrag. Zhidao werkt met coachingsmethoden die niet persé verklarend zijn maar vooral oplossingsgericht in aanpassing van gedrag strategieën die bijdragen aan succesvol functioneren in het dagelijks leven.
 
 Coaching is geworteld in de positieve psychologie. Inzicht creëren in bestaand gedrag en aanpassing daarvan in meer effectief gedrag als nodig is een vorm van leren waarbinnen de gecoachte door het ontdekken en bewust worden van eigen inzicht en kennis, zo nodig aangevuld met kennis van de coach, bekwamer wordt in het bereiken van gestelde doelen. Coaching kan een belangrijke preventieve werking hebben voor psychische klachten, welke ook een bron kunnen zijn voor lichamelijke ongemakken. Stagnatie in bekwaamheid en verdere ontwikkeling, worden als belangrijke bronnen van oorsprong van deze klachten beschouwd.

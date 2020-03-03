@@ -1,3 +1,8 @@
+---
+title: Levensstijladvies
+featuredImage: ../images/branch.png
+---
+
 Een gezonde levensstijl is een optelsom van gezond eten, voldoende bewegen, goed slapen en ervoor zorgen dat je emoties en spanningen verwerken kan. Door middel van gezonde voeding en voldoende beweging alleen al, voorkom je vele fysieke en psychische  ongemakken.
 Ook kan een teveel aan beweging of verkeerde wijze van toepassing van beweging klachten in stand houden.
 

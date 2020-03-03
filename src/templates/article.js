@@ -10,17 +10,23 @@ const buttons = [
   { to: '/#nieuws', label: 'Alle Nieuwsberichten'},
 ]
 
-const Article = ({ data, ...props }) => (
-  <Layout {...props}
-    title={data.markdownRemark.frontmatter.title}
-    headerHeight={'31.25rem'}
-  >
-    <Section>
-      <Markdown html={data.markdownRemark.html} />
-      <Buttons buttons={buttons} />
-    </Section>
-  </Layout>
-)
+const Article = ({ data, ...props }) => {
+
+  const { frontmatter, html } = data.markdownRemark
+
+  return (
+    <Layout {...props}
+      title={frontmatter.title}
+      headerImageFluid={frontmatter.featuredImage.childImageSharp.fluid}
+      headerHeight={'31.25rem'}
+    >
+      <Section>
+        <Markdown html={html} />
+        <Buttons buttons={buttons} />
+      </Section>
+    </Layout>
+  )
+}
 
 export default Article
 
@@ -34,7 +40,7 @@ export const pageQuery = graphql`
         title
         featuredImage {
           childImageSharp {
-            fluid( maxWidth: 648) {
+            fluid {
               ...GatsbyImageSharpFluid
             }
           }

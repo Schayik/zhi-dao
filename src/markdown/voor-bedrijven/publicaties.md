@@ -1,3 +1,7 @@
+---
+title: Publicaties
+---
+
 * Zhi Dao Advies: Een gefundeerde aanpak van RSI met behulp van Traditioneel Chinese Geneeskunde
 * Zhi Dao Advies: Verzuimmanagement en Reïntegratie
 * Zhi Dao Advies: Preventie en behandeling van Psychische Werkdruk

@@ -1,3 +1,7 @@
+---
+title: Diensten
+---
+
 * Strategisch Management
 * Strategische planningscyclus & coaching planvorming 
 * Advies en coaching bij organisatieveranderingen 

@@ -3,27 +3,15 @@ import styled from 'styled-components'
 import { graphql, useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 
-const Header = ({ title, height, CustomSideBar }) => {
-  const data = useStaticQuery(graphql`
-    query {
-      file(relativePath: {eq: "header-image.jpg"}) {
-        id
-        childImageSharp {
-          fluid (
-            maxWidth: 1440
-          ) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
+const Header = ({ title, size = 'medium', fluid, CustomSideBar }) => {
+
+  const ImageComponent = fluid ? Img : StandardHeaderImage
 
   return (
-    <StyledHeader height={height}>
-      <Img
+    <StyledHeader size={size}>
+      <ImageComponent
         className="image"
-        fluid={data.file.childImageSharp.fluid}
+        fluid={fluid}
         alt={title}
         style={{ position: 'absolute' }}
       />
@@ -39,9 +27,43 @@ const Header = ({ title, height, CustomSideBar }) => {
   )
 }
 
+const StandardHeaderImage = props => {
+  const data = useStaticQuery(graphql`
+    query {
+      file(relativePath: {eq: "temple.png"}) {
+        id
+        childImageSharp {
+          fluid (
+            maxWidth: 1440
+          ) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
+
+  return <Img {...props} fluid={data.file.childImageSharp.fluid} />
+}
+
+const SIZES = {
+  medium: {
+    fullWidth: '20vw',
+    standard: '18.75rem',
+  },
+  large: {
+    fullWidth: '30vw',
+    standard: '30rem',
+  },
+}
+
 const StyledHeader = styled.header`
-  height: ${p => p.height ? p.height : '18.75rem'};
+  height: ${p => SIZES[p.size].fullWidth};
   position: relative;
+
+  @media (max-width: ${p => p.theme.media.max}px) {
+    height: ${p => SIZES[p.size].standard};
+  } 
 
   .image {
     height: 100%;

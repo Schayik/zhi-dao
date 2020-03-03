@@ -1,3 +1,7 @@
+---
+title: intro
+---
+
 Zhi Dao Advies voor bedrijven en instellingen is ontstaan uit de jarenlange internationale management loopbaan van Drs. Ing. Ignas Huijbers op het gebied van opzetten, implementeren, onderhouden en continu verbeteren van management systemen op in eerste instantie milieu, arbeidsomstandigheden en kwaliteit. Dit is bovendien uitgegroeid tot de integratie van kwaliteitsdenken, procesgericht organiseren en competentieontwikkeling, op zowel operationeel niveau als strategisch niveau in internationale concerns.
 
 &nbsp;

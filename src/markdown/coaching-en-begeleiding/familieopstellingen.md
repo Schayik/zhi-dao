@@ -1,3 +1,8 @@
+---
+title: Familieopstellingen
+featuredImage: ../images/branch.png
+---
+
 Het toepassen van een familieopstelling is een vorm van psychotherapie. De werkwijze, ontwikkeld door Bert Hellinger is gebaseerd op het zogenaamd systemisch werken. Therapeuten en coaches die systemisch werken trachten door middel van het opstellen van iemands systeem van herkomst niet direct zichtbare relaties tussen familieleden en de eventuele knelpunten daartussen te herkennen, erkennen en zo mogelijk weg te nemen. 
 
 Een familieopstelling is een therapeutische sessie waarbij een deelnemer een vraagstuk inbrengt waar hij of zij helderheid over wil krijgen. Voor de hoofdrolspelers in dat vraagstuk, vaak familieleden en nauw bekenden van degene die het vraagstuk inbrengt, worden ( bij een groepssessie) andere deelnemers uitgekozen als ‘representant’. De vragende deelnemer geeft hen een plaats in het vertrek ten opzichte van de andere deelnemers, deels geholpen door de therapeut. 

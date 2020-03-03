@@ -1,3 +1,8 @@
+---
+title: Bioenergitische Begeleiding
+featuredImage: ../images/branch.png
+---
+
 Bio-energetica is de studie van de menselijke persoonlijkheid in termen van energetische processen van het lichaam volgens Alexander Lowen. Reich noemt deze levensenergie een kosmische basisenergie. De Chinese filosofie en geneeskunde noemt het Qi. 
 
  Deze geestelijke energie komt in het emotionele leven uit. Als iemand boos is laadt hij energie op, die hij niet meer kan verwerken en moet ontladen. Ook in het fysieke leven (bv. stofwisselingprocessen) kan men energie ontladen bv. d.m.v. de ademhalingstechnieken. Dat is vaak een beginpunt voor andere uitvalswegen van zelfexpressie zoals, beweging. 
