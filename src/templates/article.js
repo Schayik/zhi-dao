@@ -18,7 +18,7 @@ const Article = ({ data, ...props }) => {
     <Layout {...props}
       title={frontmatter.title}
       headerImageFluid={frontmatter.featuredImage.childImageSharp.fluid}
-      headerHeight={'31.25rem'}
+      headerSize='large'
     >
       <Section>
         <Markdown html={html} />

@@ -1,5 +1,6 @@
 ---
 title: Trainingen
+path: '5'
 ---
 
 Zhi Dao Advies heeft onderstaande trainingen in haar pakket. De trainingen zijn opgebouwd uit modules van dagdelen en zijn daardoor goed te combineren en uit te breiden met andere modules. De trainingen kunnen op maat worden gemaakt door het inbrengen van eigen cases en werkmethoden. De trainingen zijn toegankelijk voor groepen van 6 tot 12 personen en worden op lokatie gegeven. Naast de bestaande trainingen zijn trainingen in overleg samen te stellen uit bestaande modules of door nieuwe modules toe te voegen. 

@@ -3,6 +3,8 @@ import { graphql } from 'gatsby'
 
 import Layout from "../partials/layout"
 import Section from "../components/section"
+import Markdown from '../components/markdown'
+import Image from '../components/image'
 import Grid from "../components/grid"
 import News from "../components/news"
 
@@ -42,6 +44,19 @@ const items = [
 
 export const pageQuery = graphql`
   query {
+    markdownRemark(fileAbsolutePath: { regex: "/markdown/home-page/"} ) {
+      id
+      html
+      frontmatter {
+        featuredImage {
+          childImageSharp {
+            fixed (width: 360, height: 270) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
+      }
+    }
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
       filter: { fileAbsolutePath: { regex: "/news/" } }
@@ -71,6 +86,10 @@ export const pageQuery = graphql`
 
 const IndexPage = ({ data, ...props }) => (
   <Layout {...props} CustomSideBar={HomeSideBar} headerSize='large'>
+    <Section>
+      <Markdown html={data.markdownRemark.html} />
+      <Image fixed={data.markdownRemark.frontmatter.featuredImage.childImageSharp.fixed} />
+    </Section>
     <Section 
       heading="Informatie"
     >

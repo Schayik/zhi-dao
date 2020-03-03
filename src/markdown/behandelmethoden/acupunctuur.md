@@ -1,5 +1,6 @@
 ---
 title: Acupunctuur
+path: "1"
 featuredImage: ../images/branch.png
 ---
 

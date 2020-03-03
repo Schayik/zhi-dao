@@ -1,5 +1,6 @@
 ---
 title: Quantumbiofeedback
+path: '6'
 featuredImage: ../images/branch.png
 ---
 

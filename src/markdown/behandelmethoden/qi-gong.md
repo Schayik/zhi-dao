@@ -1,6 +1,7 @@
 ---
 title: Qi Gong
-featuredImage: ../images/branch.png
+path: '5'
+featuredImage: ../images/building.png
 ---
 
 Qi-gongoefeningen zijn meestal op zichzelf staande oefeningen waarbij men volgens een voorgeschreven patroon beweegt, en deze bewegingen enige malen herhaalt, alvorens men naar een volgende beweging overstapt. Een qi-gongoefening kan ook statisch zijn, waarbij een staande of zittende houding langere tijd wordt aangehouden. Vooral wordt de nadruk gelegd op ademhalingsoefeningen. 

@@ -48,12 +48,12 @@ const StandardHeaderImage = props => {
 
 const SIZES = {
   medium: {
-    fullWidth: '20vw',
     standard: '18.75rem',
+    fullWidth: 'calc(200px + 8.5vw)',
   },
   large: {
-    fullWidth: '30vw',
-    standard: '30rem',
+    standard: '32rem',
+    fullWidth: 'calc(400px + 8.5vw)',
   },
 }
 

@@ -1,5 +1,6 @@
 ---
 title: Training
+path: '7'
 ---
 
 Als specifieke inhoudelijke aandachtspunten versterking of blijvende aandacht behoeven. 

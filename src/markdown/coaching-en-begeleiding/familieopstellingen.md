@@ -1,5 +1,6 @@
 ---
 title: Familieopstellingen
+path: '3'
 featuredImage: ../images/branch.png
 ---
 

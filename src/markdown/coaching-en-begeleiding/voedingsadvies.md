@@ -1,6 +1,7 @@
 ---
 title: Voedingsadvies
-featuredImage: ../images/branch.png
+path: '1'
+featuredImage: ../images/lao-zhi.png
 ---
 
 Traditioneel Chinese geneeskunde kent een grote waarde toe aan de voedingsgewoonten. Voeding kan in grote mate bijdragen aan een goede gezondheid, en dus bij verkeerde voedingsgewoonten ook bijdragen aan het ontwikkelen van gezondheidsklachten. Bij reeds bestaande klachten kan een aangepast voedingspatroon ook bijdragen aan het bespoedigen van herstel.

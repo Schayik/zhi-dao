@@ -1,5 +1,6 @@
 ---
 title: Opdrachtgevers
+path: '2'
 ---
 
 Zhi Dao Advies heeft ervaring met diverse sectoren uit het bedrijfsleven:

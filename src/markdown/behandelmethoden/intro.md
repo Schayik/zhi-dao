@@ -1,5 +1,6 @@
 ---
 title: intro
+path: '0'
 featuredImage: ../images/branch.png
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: Coaching
-featuredImage: ../images/branch.png
+path: '4'
+featuredImage: ../images/building.png
 ---
 
 Coaching is een vorm van begeleiding die erop gericht is mensen in positieve zin te veranderen, en gebaseerd op veranderingsmogelijkheden die liggen besloten in de blijvende wisselwerking tussen inzicht en gedrag. Zhidao werkt met coachingsmethoden die niet persé verklarend zijn maar vooral oplossingsgericht in aanpassing van gedrag strategieën die bijdragen aan succesvol functioneren in het dagelijks leven.

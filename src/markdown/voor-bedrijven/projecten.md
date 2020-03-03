@@ -1,5 +1,6 @@
 ---
 title: Projecten
+path: '3'
 ---
 
 Van onderstaande projecten zijn op aanvraag nadere geanonimiseerde projectbeschrijvingen beschikbaar. 

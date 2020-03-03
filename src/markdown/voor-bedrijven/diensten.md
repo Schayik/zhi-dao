@@ -1,5 +1,6 @@
 ---
 title: Diensten
+path: '1'
 ---
 
 * Strategisch Management

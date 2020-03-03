@@ -1,5 +1,6 @@
 ---
 title: Publicaties
+path: '4'
 ---
 
 * Zhi Dao Advies: Een gefundeerde aanpak van RSI met behulp van Traditioneel Chinese Geneeskunde

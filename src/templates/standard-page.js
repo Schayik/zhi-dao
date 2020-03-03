@@ -57,6 +57,7 @@ export const pageQuery = graphql`
   query($regex: String!) {
     allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: $regex } }
+      sort: { order: ASC, fields: [frontmatter___path] }
     ) {
       edges {
         node {
