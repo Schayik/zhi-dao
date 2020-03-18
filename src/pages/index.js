@@ -6,7 +6,7 @@ import Section from "../components/section"
 import Markdown from '../components/markdown'
 import Image from '../components/image'
 import Grid from "../components/grid"
-import News from "../components/news"
+import News from "../components/klachten"
 
 import HomeSideBar from '../custom/home-side-bar'
 
@@ -58,16 +58,14 @@ export const pageQuery = graphql`
       }
     }
     allMarkdownRemark(
-      sort: { order: DESC, fields: [frontmatter___date] }
-      filter: { fileAbsolutePath: { regex: "/news/" } }
+      sort: { fields: frontmatter___title }
+      filter: { fileAbsolutePath: { regex: "/markdown/klachten/" } }
       limit: 1000
     ) {
       edges {
         node {
           id
           frontmatter {
-            day: date(formatString: "D")
-            month: date(formatString: "MMM")
             path
             title
             featuredImage {
@@ -95,7 +93,7 @@ const IndexPage = ({ data, ...props }) => (
     >
       <Grid items={items} />
     </Section>
-    <Section heading="Nieuws" id="nieuws">
+    <Section heading="Klachten" id="klachten">
       <News edges={data.allMarkdownRemark.edges} />
     </Section>
   </Layout>

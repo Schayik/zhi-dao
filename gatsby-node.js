@@ -3,14 +3,13 @@ const path = require(`path`)
 exports.createPages = async ({ actions, graphql, reporter }) => {
 
   const { createPage } = actions
-  const articleTemplate = path.resolve(`src/templates/article.js`)
+  const articleTemplate = path.resolve(`src/templates/klachten.js`)
   const standardPageTemplate = path.resolve(`src/templates/standard-page.js`)
 
   const result = await graphql(`
     {
       allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___date] }
-        filter: { fileAbsolutePath: { regex: "/markdown/news/" } }
+        filter: { fileAbsolutePath: { regex: "/markdown/klachten/" } }
         limit: 1000
       ) {
         edges {
