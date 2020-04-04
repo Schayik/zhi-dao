@@ -1,5 +1,5 @@
 ---
-title: Bioenergitische Begeleiding
+title: Bioenergetische Begeleiding
 path: '5'
 featuredImage: ../images/temple.png
 ---
