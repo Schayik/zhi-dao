@@ -86,7 +86,7 @@ const IndexPage = ({ data, ...props }) => (
   <Layout {...props} CustomSideBar={HomeSideBar} headerSize='large'>
     <Section>
       <Markdown html={data.markdownRemark.html} />
-      <Image fixed={data.markdownRemark.frontmatter.featuredImage.childImageSharp.fixed} />
+      <Image isSquare isBottom fixed={data.markdownRemark.frontmatter.featuredImage.childImageSharp.fixed} />
     </Section>
     <Section 
       heading="Informatie"

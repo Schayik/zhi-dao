@@ -30,11 +30,6 @@ const StyledButtons = styled.div`
     margin-top: 20px;
   }
 
-  p {
-    font-size: 1.25rem;
-    line-height: 1.5;
-  }
-
   @media (max-width: ${p => p.theme.media.large}px) {
     order: -1;
     margin: 0 auto 4rem auto;

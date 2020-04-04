@@ -7,11 +7,11 @@ import Button from './button'
 
 const News = ({ edges }) => {
 
-  const [showAmount, setAmount] = useState(6)
+  const [showAmount, setAmount] = useState(10)
 
   const edgesToShow = edges.slice(0, showAmount)
   const increaseAmount = () => {
-    setAmount(showAmount + 6)
+    setAmount(showAmount + 10)
   }
 
   return (

@@ -19,4 +19,12 @@ const StyledMarkdown = styled.div`
     list-style: disc;
     padding-left: 16px;
   }
+
+  a {
+    color: ${p => p.theme.colors.cherry};
+    text-decoration: underline;
+    &:hover {
+      color: ${p => p.theme.colors.red};
+    }
+  }
 `

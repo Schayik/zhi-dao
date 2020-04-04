@@ -12,7 +12,7 @@ const html = `<p>Voor het maken van een afspraak, kunt u contact opnemen. U krij
 const links = [
   { href: 'tel:0478-514313', heading: 'Telefoon', text: '0478-514313',  Icon: CallIcon },
   { href: 'mailto:info@zhidao.nl', heading: 'Mail', text: 'info@zhidao.nl', Icon: MailIcon },
-  { href: 'https://api.whatsapp.com/send?phone=0031651469310', heading: 'Whatsapp', text: '06-51469310', Icon: ChatIcon },
+  { href: 'https://api.whatsapp.com/send?phone=+31651469310', heading: 'Whatsapp', text: '06-51469310', Icon: ChatIcon },
 ]
 
 const Form = () => (
