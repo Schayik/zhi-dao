@@ -19,9 +19,13 @@ export default HomeSideBar
 const StyledBar = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  justify-content: space-evenly;
   align-items: center;
+
+  /* Edge */
+  justify-content: space-around;
+  @supports not (-ms-ime-align: auto) {
+    justify-content: space-evenly
+  }
 
   h1, h2, h3 {
     text-align: center;

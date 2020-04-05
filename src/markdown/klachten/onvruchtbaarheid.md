@@ -1,7 +1,7 @@
 ---
 path: /klachten/onvruchtbaarheid
 title: Onvruchtbaarheid
-featuredImage: ../images/building.png
+featuredImage: ../images/great-wall.jpg
 ---
 
 **De Symptomen:**  

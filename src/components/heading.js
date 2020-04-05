@@ -19,7 +19,7 @@ const StyledHeading = styled.div`
 
   .line {
     flex: 1;
-    border: 1px solid ${p => p.theme.colors.black};
+    border-top: 1px solid ${p => p.theme.colors.black};
   }
 
   h2 {

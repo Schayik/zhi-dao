@@ -1,7 +1,7 @@
 ---
 path: /klachten/osteoporose
 title: Osteoporose
-featuredImage: ../images/branch.png
+featuredImage: ../images/boats-on-river.jpg
 ---
 
 **De Symptomen:**  

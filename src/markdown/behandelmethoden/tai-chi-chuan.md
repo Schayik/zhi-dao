@@ -1,7 +1,7 @@
 ---
 title: T'ai Chi Quan
 path: '4'
-featuredImage: ../images/lao-zhi.png
+featuredImage: ../images/boats-on-river.jpg
 ---
 
 T’ai Chi Quan is een van oorsprong Chinese vechtkunst, die nu veelal beoefend wordt als neijia, innerlijke bewegingskunst. T’ai chi wordt beoefend voor zijn gezondheidsbevorderende eigenschappen, maar ook als een vechtsport voor zowel zelfverdediging als voor het uitschakelen van opponenten.  De term neijia ('innerlijke bewegingskunst') verwijst naar de nadruk die bij een aantal Chinese bewegingskunsten, zoals tai chi en xing yi quan, ligt op de innerlijke beleving en ontwikkeling.

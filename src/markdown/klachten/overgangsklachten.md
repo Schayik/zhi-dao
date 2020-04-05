@@ -1,7 +1,7 @@
 ---
 path: /klachten/overgangsklachten
 title: Overgangsklachten
-featuredImage: ../images/woman.png
+featuredImage: ../images/brown-and-red-temple.jpg
 ---
 
 **De Symptomen:**  

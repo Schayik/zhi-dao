@@ -1,12 +1,12 @@
 import React, { useState, useRef } from "react";
-import { Link } from 'gatsby'
+import { Link, withPrefix } from "gatsby"
 import styled from 'styled-components'
 
 import MenuIcon from '../icons/menu.js'
 
 import useOutsideAlerter from '../hooks/useOutsideAlerter'
 
-const Menu = ({ links }) => {
+const Menu = ({ links, pathname }) => {
 
   const [isOpen, setOpen] = useState(false)
 
@@ -40,7 +40,7 @@ const Menu = ({ links }) => {
       <ul className={isOpen ? 'open' : 'closed'}>
         {links.map(link => (
           <li key={link.link}>
-            <Link onClick={handleClick} to={link.link}>
+            <Link onClick={handleClick} to={link.link} className={pathname === withPrefix(link.link) ? 'active' : ''}>
               {link.label}
             </Link>
           </li>
@@ -114,6 +114,9 @@ const StyledMenu = styled.div`
         color: ${p => p.theme.colors.white};
         font-size: 1.25rem;
         font-weight: 700;
+        &.active {
+          color: ${p => p.theme.colors.black};
+        }
       }
     }
   }

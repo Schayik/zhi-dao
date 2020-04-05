@@ -5,7 +5,7 @@ import Img from 'gatsby-image'
 import THEME from '../styles/theme'
 
 const rectStyle = { width: '360px', height: '270px' }
-const squareStyle = { width: THEME.sidebar.width, height: '270px' }
+const squareStyle = { width: THEME.sidebar.width, height: '17rem' }
 
 const Image = ({ fixed, isSquare=false, isBottom=false }) => (
   <StyledImage as={Img} fixed={fixed} style={isSquare ? squareStyle : rectStyle} className={isBottom ? 'bottom' : 'top'} />
@@ -28,7 +28,7 @@ const StyledImage = styled.div`
 
     &.bottom {
       order: 1;
-      && { margin: 2rem auto 0 auto; }
+      && { margin: 2rem 0 0 0; }
     }
   }
 `

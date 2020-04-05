@@ -31,7 +31,7 @@ const NavBar = ({ pathname }) => (
     <div className='compress'>
       <List className='big' links={links} pathname={pathname} />
       <List className='small' links={linksSmall} pathname={pathname} />
-      <Menu className='menu' links={links} />
+      <Menu className='menu' links={links} pathname={pathname} />
       <div className='sidebar'>
         <Link to='/' className={pathname === withPrefix('/') ? 'flag active' : 'flag'}>
           <Logo />

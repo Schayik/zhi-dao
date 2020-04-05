@@ -19,6 +19,11 @@ import GlobalStyle from '../styles/global'
 import THEME from '../styles/theme'
 // import "../styles/gatsby.css"
 
+if (typeof window !== "undefined") {
+  // eslint-disable-next-line global-require
+  require("smooth-scroll")('a[href*="#"]')
+}
+
 const Layout = ({ children, title, CustomSideBar, location, headerSize, headerImageFluid }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {

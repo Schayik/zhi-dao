@@ -1,7 +1,7 @@
 ---
 title: Kruidengeneeskunde
 path: '3'
-featuredImage: ../images/temple.png
+featuredImage: ../images/brown-and-red-temple.jpg
 ---
 
 Chinese kruidengeneeskunde gaat uit  van de genezende eigenschappen van planten en mineralen. Door toediening van de juiste  Chinese kruidenformule kunnen uw klachten verdwijnen en uw lichamelijke en/of psychische balans herstellen.  De Chinese kruiden en acupunctuur versterken elkaars werking, daarom worden de Chinese kruiden en een acupunctuur behandeling ook wel tegelijkertijd in gezet. Acupunctuur brengt het lichaam in balans en Chinese kruiden voeden het lichaam. De kruiden worden altijd persoonlijk afgestemd volgens een diagnose uit de traditionele Chinese geneeskunde.

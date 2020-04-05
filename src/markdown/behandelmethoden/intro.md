@@ -1,7 +1,6 @@
 ---
 title: intro
 path: '0'
-featuredImage: ../images/branch.png
 ---
 
 De Chinese geneeskunde heeft een van de meest verfijnde diagnostische systemen ter wereld. Door het voelen van de pols, het zien van de tong en het stellen van gerichte vragen en lichamelijk onderzoek kan de Chinese geneeskundige de oorzaak van de ziekte opsporen.  
