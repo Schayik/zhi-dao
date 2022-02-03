@@ -1,3 +1,6 @@
+_Website out of use as of sudden passing of Ignas Huijbers, the owner of Zhi Dao. Rest in piece Ignas, 08-04-1961 - 04-07-2020._
+
+
 # GitHub Pages
 
 ### GitHub
